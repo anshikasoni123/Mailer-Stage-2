@@ -11,8 +11,8 @@ const transporter = nodemailer.createTransport({
     port: 465,
     host: "smtp.gmail.com",
     auth: {
-        user: '',
-        pass: '',
+        user: 'krishnashyam1977456@gmail.com',
+        pass: 'jcindvdhugxxzpri'
     },
     secure: true,
 });
@@ -20,7 +20,7 @@ const transporter = nodemailer.createTransport({
 app.post("/send-mail", (req, res) => {
     const to = req.body.to;
     const mailData = {
-        from: "",
+        from: "krishnashyam1977456@gmail.com",
         to: to,
         subject: "Your payment is due!",
         html: ` <p>
