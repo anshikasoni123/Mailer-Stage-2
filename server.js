@@ -5,8 +5,6 @@ app.use(express.json())
 
 var nodemailer = require('nodemailer');
 
-const name = "krishnashyam1977456@gmail.com";
-
 const transporter = nodemailer.createTransport({
     port: 465,
     host: "smtp.gmail.com",
@@ -19,6 +17,7 @@ const transporter = nodemailer.createTransport({
 
 app.post("/send-mail", (req, res) => {
     const to = req.body.to;
+    const name = req.body.name;
     const mailData = {
         from: "krishnashyam1977456@gmail.com",
         to: to,
